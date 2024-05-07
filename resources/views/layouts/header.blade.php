@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sistem Aplikasi Pengaduan Keluhan Warga</title>
+    
     <link rel="shortcut icon" type="image/png" href="{{ secure_asset('app-aduan/assets/images/logos/favicon2.png') }}" />
     <link rel="stylesheet" href="{{ secure_asset('app-aduan/assets/css/styles.min.css') }}" />
     <link
