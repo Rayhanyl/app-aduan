@@ -14,8 +14,7 @@
                             <hr>
                             <div class="col-12 col-lg-3 my-1">
                                 <label for="filter_date" class="form-label">Waktu Pembuatan :</label>
-                                <input type="date" class="form-control" name="filter_date" id="filter_date"
-                                    value="{{ \Carbon\Carbon::now()->format('Y-m-d') }}">
+                                <input type="date" class="form-control" name="filter_date" id="filter_date">
                             </div>
                             <div class="col-12 my-2 d-flex justify-content-center" id="loader-monitoring-keluhan">
                             </div>
@@ -32,7 +31,7 @@
         <script>
             $(document).ready(function() {
                 // Trigger change event on date selection
-                $(document).trigger('change', '#filter_date', function(e) {});
+                getListKeluhan("{{ \Carbon\Carbon::now()->format('Y-m-d') }}");
 
                 // Bind change event to date input
                 $(document).on('change', '#filter_date', function(e) {

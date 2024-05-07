@@ -41,28 +41,28 @@
                                         aria-labelledby="pills-open-tab" tabindex="0">
                                         <div id="open-content">
                                         </div>
-                                        <div id="reload-open-content">
+                                        <div id="reload-open-content" class="d-flex justify-content-center">
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="pills-inprogress" role="tabpanel"
                                         aria-labelledby="pills-inprogress-tab" tabindex="0">
                                         <div id="inprogress-content">
                                         </div>
-                                        <div id="reload-inprogress-content">
+                                        <div id="reload-inprogress-content" class="d-flex justify-content-center">
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="pills-reject" role="tabpanel"
                                         aria-labelledby="pills-reject-tab" tabindex="0">
                                         <div id="reject-content">
                                         </div>
-                                        <div id="reload-reject-content">
+                                        <div id="reload-reject-content" class="d-flex justify-content-center">
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="pills-done" role="tabpanel"
                                         aria-labelledby="pills-done-tab" tabindex="0">
                                         <div id="done-content">
                                         </div>
-                                        <div id="reload-done-content">
+                                        <div id="reload-done-content" class="d-flex justify-content-center">
                                         </div>
                                     </div>
                                 </div>
