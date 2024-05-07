@@ -20,7 +20,7 @@
         <div>
             <div class="brand-logo d-flex align-items-center justify-content-between">
                 <a href="{{ route('view.main.page') }}" class="text-nowrap logo-img">
-                    <img style="width:75%;" src="{{ asset('assets/images/logos/swamedia.png') }}" alt="" />
+                    <img style="width:75%;" src="{{ asset('app-aduan/assets/images/logos/swamedia.png') }}" alt="" />
                 </a>
                 <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                     <i class="ti ti-x fs-8"></i>
