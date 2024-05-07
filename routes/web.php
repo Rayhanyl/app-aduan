@@ -14,8 +14,8 @@ use App\Http\Controllers\MainController;
 |
 */
 
-Route::prefix('app-aduan')->group(function () {
-    Route::get('/', [MainController::class, 'mainView'])
+// Route::prefix('app-aduan')->group(function () {
+    Route::get('/app-aduan', [MainController::class, 'mainView'])
         ->name('view.main.page');
     Route::get('buat/keluhan', [MainController::class, 'createView'])
         ->name('view.create.page');
@@ -47,4 +47,4 @@ Route::prefix('app-aduan')->group(function () {
         ->name('store.complaiment');
     Route::post('update/status/keluhan', [MainController::class, 'approvalComplaint'])
         ->name('approval.status.complaiment');
-});
+// });
