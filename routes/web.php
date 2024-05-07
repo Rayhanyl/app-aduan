@@ -13,7 +13,8 @@ use App\Http\Controllers\MainController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-// Route::prefix('app-aduan')->group(function () {
+
+Route::prefix('app-aduan')->group(function () {
     Route::get('/', [MainController::class, 'mainView'])
         ->name('view.main.page');
     Route::get('buat/keluhan', [MainController::class, 'createView'])
@@ -46,4 +47,4 @@ use App\Http\Controllers\MainController;
         ->name('store.complaiment');
     Route::post('update/status/keluhan', [MainController::class, 'approvalComplaint'])
         ->name('approval.status.complaiment');
-// });
+});
