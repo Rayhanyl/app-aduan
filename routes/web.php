@@ -16,15 +16,15 @@ use App\Http\Controllers\MainController;
 
 Route::get('/', [MainController::class, 'mainView'])
     ->name('view.main.page');
-Route::get('/buat/keluhan', [MainController::class, 'createView'])
+Route::get('app-aduan/buat/keluhan', [MainController::class, 'createView'])
     ->name('view.create.page');
-Route::get('/monitoring', [MainController::class, 'monitoringView'])
+Route::get('app-aduan/monitoring', [MainController::class, 'monitoringView'])
     ->name('view.monitoring.page');
-Route::get('/list/keluhan', [MainController::class, 'listView'])
+Route::get('app-aduan/list/keluhan', [MainController::class, 'listView'])
     ->name('view.list.page');
 
-Route::prefix('ajax')->group(function () {
-    Route::get('/open', [MainController::class, 'openAjax'])
+Route::prefix('app-aduan/ajax')->group(function () {
+    Route::get('app-aduan/open', [MainController::class, 'openAjax'])
         ->name('ajax.open.content');
     Route::get('/inprogress', [MainController::class, 'inprogressAjax'])
         ->name('ajax.inprogress.content');
@@ -42,7 +42,7 @@ Route::prefix('ajax')->group(function () {
         ->name('ajax.tracking.keluhan');
 });
 
-Route::post('/create/complaint', [MainController::class, 'storeComplaint'])
+Route::post('app-aduan/create/complaint', [MainController::class, 'storeComplaint'])
     ->name('store.complaiment');
-Route::post('/update/status/keluhan', [MainController::class, 'approvalComplaint'])
+Route::post('app-aduan/update/status/keluhan', [MainController::class, 'approvalComplaint'])
     ->name('approval.status.complaiment');
