@@ -15,7 +15,7 @@ use App\Http\Controllers\MainController;
 */
 
 Route::prefix('app-aduan')->group(function () {
-    Route::get('/app-aduan', [MainController::class, 'mainView'])
+    Route::get('/', [MainController::class, 'mainView'])
         ->name('view.main.page');
     Route::get('buat/keluhan', [MainController::class, 'createView'])
         ->name('view.create.page');
