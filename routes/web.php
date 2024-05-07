@@ -24,7 +24,7 @@ Route::get('app-aduan/list/keluhan', [MainController::class, 'listView'])
     ->name('view.list.page');
 
 Route::prefix('app-aduan/ajax')->group(function () {
-    Route::get('app-aduan/open', [MainController::class, 'openAjax'])
+    Route::get('/open', [MainController::class, 'openAjax'])
         ->name('ajax.open.content');
     Route::get('/inprogress', [MainController::class, 'inprogressAjax'])
         ->name('ajax.inprogress.content');
