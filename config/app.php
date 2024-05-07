@@ -186,7 +186,6 @@ return [
          * Package Service Providers...
          */
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -212,7 +211,6 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
-        'Debugbar' => Barryvdh\Debugbar\Facades\Debugbar::class,
     ])->toArray(),
 
 ];
