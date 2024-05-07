@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  --}}
     <title>Sistem Aplikasi Pengaduan Keluhan Warga</title>
     <link rel="shortcut icon" type="image/png" href="{{ asset('app-aduan/assets/images/logos/favicon2.png') }}" />
     <link rel="stylesheet" href="{{ asset('app-aduan/assets/css/styles.min.css') }}" />
