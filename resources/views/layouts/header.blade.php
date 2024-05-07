@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sistem Aplikasi Pengaduan Keluhan Warga</title>
-    <link rel="shortcut icon" type="image/png" href="{{ asset('app-aduan/assets/images/logos/favicon2.png') }}" />
-    <link rel="stylesheet" href="{{ asset('app-aduan/assets/css/styles.min.css') }}" />
+    <link rel="shortcut icon" type="image/png" href="{{ secure_asset('app-aduan/assets/images/logos/favicon2.png') }}" />
+    <link rel="stylesheet" href="{{ secure_asset('app-aduan/assets/css/styles.min.css') }}" />
     <link
         href="https://cdn.datatables.net/v/bs5/dt-2.0.6/date-1.5.2/fc-5.0.0/fh-4.0.1/r-3.0.2/rg-1.5.0/rr-1.5.0/sc-2.4.2/datatables.min.css"
         rel="stylesheet">
