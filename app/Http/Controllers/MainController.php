@@ -19,7 +19,10 @@ class MainController extends Controller
 
     public function mainView()
     {
-        Debugbar::info('test');
+        // Enable/disable Debugbar
+        Debugbar::enable();
+        // Log a message
+        Debugbar::info('This is some information!');
         return view('main.index');
     }
 
