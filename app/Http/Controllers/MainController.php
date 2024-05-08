@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-use Barryvdh\Debugbar\Facades\Debugbar;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class MainController extends Controller
@@ -19,10 +18,6 @@ class MainController extends Controller
 
     public function mainView()
     {
-        // Enable/disable Debugbar
-        Debugbar::enable();
-        // Log a message
-        Debugbar::info('This is some information!');
         return view('main.index');
     }
 
