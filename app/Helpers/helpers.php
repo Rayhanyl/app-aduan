@@ -6,8 +6,21 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use RealRashid\SweetAlert\Facades\Alert;
 
-function getBaseUrl(){
+function getBaseUrl()
+{
     $baseUrl = env('BASE_URL');
+    return $baseUrl;
+}
+
+function getWilayahUrl()
+{
+    $baseUrl = env('BASE_URL_KECAMATAN');
+    return $baseUrl;
+}
+
+function getWargaUrl()
+{
+    $baseUrl = env('BASE_URL_WARGA');
     return $baseUrl;
 }
 

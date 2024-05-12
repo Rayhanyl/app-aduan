@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sistem Aplikasi Pengaduan Keluhan Warga</title>
-    
+
     <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/favicon2.png') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/styles.min.css') }}" />
     <link
@@ -45,7 +45,7 @@
                     </li>
                     <li class="nav-small-cap">
                         <iconify-icon icon="solar:menu-dots-linear" class="nav-small-cap-icon fs-4"></iconify-icon>
-                        <span class="hide-menu">MENU</span>
+                        <span class="hide-menu">APLIKASI KELUHAN</span>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{ route('view.create.page') }}" aria-expanded="false">
@@ -65,10 +65,44 @@
                             <span class="hide-menu">Monitoring Keluhan</span>
                         </a>
                     </li>
-                    <div class="fixed-bottom px-5">
-                        <p>PT. Swamedia Informatika</p>
-                        <p>All Rights Reserved.</p>
-                    </div>
+                    <li>
+                        <span class="sidebar-divider lg"></span>
+                    </li>
+                    <li class="nav-small-cap">
+                        <iconify-icon icon="solar:menu-dots-linear" class="nav-small-cap-icon fs-4"></iconify-icon>
+                        <span class="hide-menu">APLIKASI KEPENDUDUKAN</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ route ('view.create.warga.page') }}" aria-expanded="false">
+                            <iconify-icon icon="solar:clipboard-add-linear"></iconify-icon>
+                            <span class="hide-menu">Tambah Data Warga</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ route ('view.list.warga.page') }}" aria-expanded="false">
+                            <iconify-icon icon="solar:clipboard-list-linear"></iconify-icon>
+                            <span class="hide-menu">List Data Warga</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="sidebar-divider lg"></span>
+                    </li>
+                    <li class="nav-small-cap">
+                        <iconify-icon icon="solar:menu-dots-linear" class="nav-small-cap-icon fs-4"></iconify-icon>
+                        <span class="hide-menu">APLIKASI KEWILAYAHAN</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ route ('view.create.wilayah.page') }}" aria-expanded="false">
+                            <iconify-icon icon="solar:clipboard-add-linear"></iconify-icon>
+                            <span class="hide-menu">Tambah Wilayah</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ route ('view.list.wilayah.page') }}" aria-expanded="false">
+                            <iconify-icon icon="solar:clipboard-list-linear"></iconify-icon>
+                            <span class="hide-menu">List Wilayah</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <!-- End Sidebar navigation -->
