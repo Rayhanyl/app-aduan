@@ -30,6 +30,8 @@ Route::post('create/complaint', [MainController::class, 'storeComplaint'])
 Route::post('update/status/keluhan', [MainController::class, 'approvalComplaint'])
     ->name('approval.status.complaiment');
 Route::prefix('ajax/keluhan')->group(function () {
+    Route::get('/get/data/penduduk', [MainController::class, 'getDataWarga'])
+        ->name('ajax.get.data.penduduk');
     Route::get('/open', [MainController::class, 'openAjax'])
         ->name('ajax.open.content');
     Route::get('/inprogress', [MainController::class, 'inprogressAjax'])

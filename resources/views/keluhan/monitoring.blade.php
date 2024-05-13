@@ -7,8 +7,8 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-12">
-                                <h5 class="card-title fw-semibold mb-4">MONITORING KELUHAN WARGA</h5>
+                            <div class="col-12  bg-primary p-3 rounded text-white">
+                                <h5 class="card-title fw-semibold mb-4 text-white">MONITORING KELUHAN WARGA</h5>
                                 <p>Memantau keluhan warga sudah sejauh mana progress penangan keluhan tersebut.</p>
                             </div>
                             <hr>

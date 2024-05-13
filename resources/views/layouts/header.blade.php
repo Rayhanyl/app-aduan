@@ -43,7 +43,7 @@
                     <li>
                         <span class="sidebar-divider lg"></span>
                     </li>
-                    <li class="nav-small-cap">
+                    <li class="nav-small-cap text-primary">
                         <iconify-icon icon="solar:menu-dots-linear" class="nav-small-cap-icon fs-4"></iconify-icon>
                         <span class="hide-menu">APLIKASI KELUHAN</span>
                     </li>
@@ -68,18 +68,18 @@
                     <li>
                         <span class="sidebar-divider lg"></span>
                     </li>
-                    <li class="nav-small-cap">
+                    <li class="nav-small-cap text-danger">
                         <iconify-icon icon="solar:menu-dots-linear" class="nav-small-cap-icon fs-4"></iconify-icon>
                         <span class="hide-menu">APLIKASI KEPENDUDUKAN</span>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route ('view.create.warga.page') }}" aria-expanded="false">
+                        <a class="sidebar-link" href="{{ route('view.create.warga.page') }}" aria-expanded="false">
                             <iconify-icon icon="solar:clipboard-add-linear"></iconify-icon>
                             <span class="hide-menu">Tambah Data Warga</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route ('view.list.warga.page') }}" aria-expanded="false">
+                        <a class="sidebar-link" href="{{ route('view.list.warga.page') }}" aria-expanded="false">
                             <iconify-icon icon="solar:clipboard-list-linear"></iconify-icon>
                             <span class="hide-menu">List Data Warga</span>
                         </a>
@@ -87,18 +87,18 @@
                     <li>
                         <span class="sidebar-divider lg"></span>
                     </li>
-                    <li class="nav-small-cap">
+                    <li class="nav-small-cap text-info">
                         <iconify-icon icon="solar:menu-dots-linear" class="nav-small-cap-icon fs-4"></iconify-icon>
                         <span class="hide-menu">APLIKASI KEWILAYAHAN</span>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route ('view.create.wilayah.page') }}" aria-expanded="false">
+                        <a class="sidebar-link" href="{{ route('view.create.wilayah.page') }}" aria-expanded="false">
                             <iconify-icon icon="solar:clipboard-add-linear"></iconify-icon>
                             <span class="hide-menu">Tambah Wilayah</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route ('view.list.wilayah.page') }}" aria-expanded="false">
+                        <a class="sidebar-link" href="{{ route('view.list.wilayah.page') }}" aria-expanded="false">
                             <iconify-icon icon="solar:clipboard-list-linear"></iconify-icon>
                             <span class="hide-menu">List Wilayah</span>
                         </a>

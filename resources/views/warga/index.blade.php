@@ -6,57 +6,70 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <div class="row p-3">
-                            <div class="col-12 table-responsive">
-                                <table class="table" id="data-table-list-warga">
-                                    <thead class="table-info">
-                                        <tr>
-                                            <th>NIK</th>
-                                            <th>Nama</th>
-                                            <th>Jenis Kelamin</th>
-                                            <th>Agama</th>
-                                            <th>Status</th>
-                                            <th>Email</th>
-                                            <th>No Wa</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($data_warga->data as $item)
-                                            <tr>
-                                                <td data-bs-toggle="tooltip" data-bs-placement="top"
-                                                    title="{{ $item->nik }}">{{ Str::limit($item->nik, '8', '...') }}
-                                                </td>
-                                                <td data-bs-toggle="tooltip" data-bs-placement="top"
-                                                    title="{{ $item->nama }}">{{ Str::limit($item->nama, '5', '...') }}
-                                                </td>
-                                                <td>{{ $item->jenisKelamin }}</td>
-                                                <td>{{ $item->agama }}</td>
-                                                <td>{{ $item->status }}</td>
-                                                <td data-bs-toggle="tooltip" data-bs-placement="top"
-                                                    title="{{ $item->email }}">{{ Str::limit($item->email, '7', '...') }}
-                                                </td>
-                                                <td>{{ $item->noWa }}</td>
-                                                <td>
-                                                    <div class="d-flex">
-                                                        <div class="p-2">
-                                                            <button class="btn btn-primary btn-sm btn-detail-penduduk"
-                                                                data-id="{{ $item->nik }}">Detail</button>
-                                                        </div>
-                                                        <div class="p-2">
-                                                            <button class="btn btn-warning btn-sm btn-edit-penduduk"
-                                                                data-id="{{ $item->nik }}">Edit</button>
-                                                        </div>
-                                                        <div class="p-2">
-                                                            <a href="{{ route('delete.penduduk', $item->nik) }}"
-                                                                class="btn btn-danger btn-sm btn-delete-penduduk">Delete</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
+                        <div class="row">
+                            <div class="col-12 bg-danger p-3 rounded text-white">
+                                <h5 class="card-title fw-semibold mb-4 text-white">LIST DATA KEPENDUDUKAN</h5>
+                                <p>Daftar data kependudukan.</p>
+                            </div>
+                            <hr>
+                            <div class="col-12">
+                                <div class="row p-3">
+                                    <div class="col-12 table-responsive">
+                                        <table class="table" id="data-table-list-warga">
+                                            <thead class="table-info">
+                                                <tr>
+                                                    <th>NIK</th>
+                                                    <th>Nama</th>
+                                                    <th>Jenis Kelamin</th>
+                                                    <th>Agama</th>
+                                                    <th>Status</th>
+                                                    <th>Email</th>
+                                                    <th>No Wa</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($data_warga->data as $item)
+                                                    <tr>
+                                                        <td data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="{{ $item->nik }}">
+                                                            {{ Str::limit($item->nik, '8', '...') }}
+                                                        </td>
+                                                        <td data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="{{ $item->nama }}">
+                                                            {{ Str::limit($item->nama, '5', '...') }}
+                                                        </td>
+                                                        <td>{{ $item->jenisKelamin }}</td>
+                                                        <td>{{ $item->agama }}</td>
+                                                        <td>{{ $item->status }}</td>
+                                                        <td data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="{{ $item->email }}">
+                                                            {{ Str::limit($item->email, '7', '...') }}
+                                                        </td>
+                                                        <td>{{ $item->noWa }}</td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div class="p-2">
+                                                                    <button
+                                                                        class="btn btn-primary btn-sm btn-detail-penduduk"
+                                                                        data-id="{{ $item->nik }}">Detail</button>
+                                                                </div>
+                                                                <div class="p-2">
+                                                                    <button class="btn btn-warning btn-sm btn-edit-penduduk"
+                                                                        data-id="{{ $item->nik }}">Edit</button>
+                                                                </div>
+                                                                <div class="p-2">
+                                                                    <a href="{{ route('delete.penduduk', $item->nik) }}"
+                                                                        class="btn btn-danger btn-sm btn-delete-penduduk">Delete</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

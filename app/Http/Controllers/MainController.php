@@ -10,10 +10,14 @@ class MainController extends Controller
 {
 
     private $baseUrl;
+    private $wargaUrl;
+    private $wilayahUrl;
 
     public function __construct()
     {
         $this->baseUrl = getBaseUrl();
+        $this->wargaUrl = getWargaUrl();
+        $this->wilayahUrl = getWilayahUrl();
     }
 
     public function mainView()
@@ -33,7 +37,21 @@ class MainController extends Controller
 
     public function createView()
     {
-        return view('keluhan.create');
+        $kecamatan = fetchApi($this->wilayahUrl);
+        return view('keluhan.create', compact('kecamatan'));
+    }
+
+    public function getDataWarga(Request $request)
+    {
+        try {
+            if ($request->ajax()) {
+                $data_penduduk = fetchApi($this->wargaUrl . '/' . $request->id_penduduk);
+                return response()->json($data_penduduk);
+            }
+            return abort(404);
+        } catch (\Exception $e) {
+            Alert::toast('Error Ajax', 'error');
+        }
     }
 
     public function openAjax(Request $request)

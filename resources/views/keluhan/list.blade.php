@@ -7,8 +7,8 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-12">
-                                <h5 class="card-title fw-semibold mb-4">LIST KELUHAN WARGA</h5>
+                            <div class="col-12 bg-primary p-3 rounded text-white">
+                                <h5 class="card-title fw-semibold mb-4 text-white">LIST KELUHAN WARGA</h5>
                                 <p>Daftar keluhan yang disampaikan oleh warga untuk ditindaklanjuti oleh Helpdesk.</p>
                             </div>
                             <hr>
@@ -73,116 +73,116 @@
             </div>
         </div>
     </div>
-    
+
     {{-- Modal --}}
     @include('keluhan.modal.modal')
     {{-- Modal --}}
 
     @push('scripts')
-    <script>
-        $(document).ready(function() {
-            $('#pills-open-tab').trigger('click');
-        });
-
-        $(document).on('click', '#pills-open-tab', function() {
-            $.ajax({
-                type: "GET",
-                url: "{{ route('ajax.open.content') }}",
-                dataType: 'html',
-                data: {},
-                beforeSend: function() {
-                    $('#open-content').html('');
-                    $('#reload-open-content').html(
-                        '<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>'
-                    );
-                },
-                success: function(data) {
-                    $('#open-content').html(data);
-                },
-                complete: function() {
-                    $('#reload-open-content').html('');
-                },
-                error: function(xhr, ajaxOptions, thrownError) {
-                    var pesan = xhr.status + " " + thrownError + "\n" + xhr.responseText;
-                    $('#open-content').html(pesan);
-                },
+        <script>
+            $(document).ready(function() {
+                $('#pills-open-tab').trigger('click');
             });
-        });
 
-        $(document).on('click', '#pills-inprogress-tab', function() {
-            $.ajax({
-                type: "GET",
-                url: "{{ route('ajax.inprogress.content') }}",
-                dataType: 'html',
-                data: {},
-                beforeSend: function() {
-                    $('#inprogress-content').html('');
-                    $('#reload-inprogress-content').html(
-                        '<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>'
-                    );
-                },
-                success: function(data) {
-                    $('#inprogress-content').html(data);
-                },
-                complete: function() {
-                    $('#reload-inprogress-content').html('');
-                },
-                error: function(xhr, ajaxOptions, thrownError) {
-                    var pesan = xhr.status + " " + thrownError + "\n" + xhr.responseText;
-                    $('#inprogress-content').html(pesan);
-                },
+            $(document).on('click', '#pills-open-tab', function() {
+                $.ajax({
+                    type: "GET",
+                    url: "{{ route('ajax.open.content') }}",
+                    dataType: 'html',
+                    data: {},
+                    beforeSend: function() {
+                        $('#open-content').html('');
+                        $('#reload-open-content').html(
+                            '<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>'
+                        );
+                    },
+                    success: function(data) {
+                        $('#open-content').html(data);
+                    },
+                    complete: function() {
+                        $('#reload-open-content').html('');
+                    },
+                    error: function(xhr, ajaxOptions, thrownError) {
+                        var pesan = xhr.status + " " + thrownError + "\n" + xhr.responseText;
+                        $('#open-content').html(pesan);
+                    },
+                });
             });
-        });
 
-        $(document).on('click', '#pills-reject-tab', function() {
-            $.ajax({
-                type: "GET",
-                url: "{{ route('ajax.reject.content') }}",
-                dataType: 'html',
-                data: {},
-                beforeSend: function() {
-                    $('#reject-content').html('');
-                    $('#reload-reject-content').html(
-                        '<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>'
-                    );
-                },
-                success: function(data) {
-                    $('#reject-content').html(data);
-                },
-                complete: function() {
-                    $('#reload-reject-content').html('');
-                },
-                error: function(xhr, ajaxOptions, thrownError) {
-                    var pesan = xhr.status + " " + thrownError + "\n" + xhr.responseText;
-                    $('#reject-content').html(pesan);
-                },
+            $(document).on('click', '#pills-inprogress-tab', function() {
+                $.ajax({
+                    type: "GET",
+                    url: "{{ route('ajax.inprogress.content') }}",
+                    dataType: 'html',
+                    data: {},
+                    beforeSend: function() {
+                        $('#inprogress-content').html('');
+                        $('#reload-inprogress-content').html(
+                            '<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>'
+                        );
+                    },
+                    success: function(data) {
+                        $('#inprogress-content').html(data);
+                    },
+                    complete: function() {
+                        $('#reload-inprogress-content').html('');
+                    },
+                    error: function(xhr, ajaxOptions, thrownError) {
+                        var pesan = xhr.status + " " + thrownError + "\n" + xhr.responseText;
+                        $('#inprogress-content').html(pesan);
+                    },
+                });
             });
-        });
 
-        $(document).on('click', '#pills-done-tab', function() {
-            $.ajax({
-                type: "GET",
-                url: "{{ route('ajax.done.content') }}",
-                dataType: 'html',
-                data: {},
-                beforeSend: function() {
-                    $('#done-content').html('');
-                    $('#reload-done-content').html(
-                        '<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>'
-                    );
-                },
-                success: function(data) {
-                    $('#done-content').html(data);
-                },
-                complete: function() {
-                    $('#reload-done-content').html('');
-                },
-                error: function(xhr, ajaxOptions, thrownError) {
-                    var pesan = xhr.status + " " + thrownError + "\n" + xhr.responseText;
-                    $('#done-content').html(pesan);
-                },
+            $(document).on('click', '#pills-reject-tab', function() {
+                $.ajax({
+                    type: "GET",
+                    url: "{{ route('ajax.reject.content') }}",
+                    dataType: 'html',
+                    data: {},
+                    beforeSend: function() {
+                        $('#reject-content').html('');
+                        $('#reload-reject-content').html(
+                            '<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>'
+                        );
+                    },
+                    success: function(data) {
+                        $('#reject-content').html(data);
+                    },
+                    complete: function() {
+                        $('#reload-reject-content').html('');
+                    },
+                    error: function(xhr, ajaxOptions, thrownError) {
+                        var pesan = xhr.status + " " + thrownError + "\n" + xhr.responseText;
+                        $('#reject-content').html(pesan);
+                    },
+                });
             });
-        });
-    </script>
+
+            $(document).on('click', '#pills-done-tab', function() {
+                $.ajax({
+                    type: "GET",
+                    url: "{{ route('ajax.done.content') }}",
+                    dataType: 'html',
+                    data: {},
+                    beforeSend: function() {
+                        $('#done-content').html('');
+                        $('#reload-done-content').html(
+                            '<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>'
+                        );
+                    },
+                    success: function(data) {
+                        $('#done-content').html(data);
+                    },
+                    complete: function() {
+                        $('#reload-done-content').html('');
+                    },
+                    error: function(xhr, ajaxOptions, thrownError) {
+                        var pesan = xhr.status + " " + thrownError + "\n" + xhr.responseText;
+                        $('#done-content').html(pesan);
+                    },
+                });
+            });
+        </script>
     @endpush
 @endsection
