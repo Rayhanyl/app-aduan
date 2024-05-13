@@ -14,7 +14,7 @@
                             <hr>
                             <div class="col-12 col-lg-3 my-1">
                                 <label for="filter_date" class="form-label">Waktu Pembuatan :</label>
-                                <input type="date" class="form-control" name="filter_date" id="filter_date">
+                                <input type="date" class="form-control" name="filter_date" id="filter_date" value="{{ \Carbon\Carbon::now()->format('Y-m-d') }}">
                             </div>
                             <div class="col-12 my-2 d-flex justify-content-center" id="loader-monitoring-keluhan">
                             </div>

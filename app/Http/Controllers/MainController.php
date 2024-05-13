@@ -59,6 +59,12 @@ class MainController extends Controller
         try {
             if ($request->ajax()) {
                 $data_open = fetchApi($this->baseUrl . '?status=OPEN&size=999999');
+                // $response = Http::withOptions(['verify' => false])
+                //     ->withHeaders([
+                //         'Authorization' => 'Bearer ',
+                //     ])
+                //     ->get('https://apim.apicentrum.site:9354/t/swamedia.apicentrum.cloud/pemda/keluhan/1.0.0/keluhan');
+                // $data_open = json_decode($response->getBody()->getContents());
                 return view('keluhan.ajax._open', compact('data_open'));
             }
             return abort(404);
