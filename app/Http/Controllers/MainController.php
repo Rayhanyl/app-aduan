@@ -199,7 +199,7 @@ class MainController extends Controller
             $response = Http::withHeaders([
                 'Authorization' => 'Bearer ' . session('access_token'),
             ])
-            ->withBody(json_encode($payloads), 'application/json')
+                ->withBody(json_encode($payloads), 'application/json')
                 ->put($this->publisherKeluhan  . '/' . $request->id);
             $data = json_decode($response->getBody()->getContents());
             $statusCode = $response->getStatusCode();
@@ -231,8 +231,8 @@ class MainController extends Controller
             $response = Http::withHeaders([
                 'Authorization' => 'Bearer ' . session('access_token'),
             ])
-            ->withBody(json_encode($payloads), 'application/json')
-            ->post($this->publisherKeluhan);
+                ->withBody(json_encode($payloads), 'application/json')
+                ->post($this->publisherKeluhan);
             $data = json_decode($response->getBody()->getContents());
             $statusCode = $response->getStatusCode();
             if ($statusCode == 201 || $statusCode == 200) {

@@ -41,7 +41,7 @@
     </div>
     <div class="col-12">
         <label for="uraian_keluhan" class="form-label">Uraian Keluhan</label>
-        <textarea class="form-control" name="uraian_keluhan" id="uraian_keluhan" rows="5" readonly>{{ $detail_keluhan->data->uraianKeluhan }}</textarea>
+        <textarea class="form-control" name="uraian_keluhan" id="uraian_keluhan" rows="7" readonly>{{ $detail_keluhan->data->uraianKeluhan }}</textarea>
     </div>
     <div class="col-12">
         <label for="status" class="form-label">Status Approval</label>

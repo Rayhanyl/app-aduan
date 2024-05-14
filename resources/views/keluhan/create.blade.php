@@ -64,7 +64,7 @@
                             <div class="col-12">
                                 <div class="col-12 mb-3">
                                     <label for="uraian_keluhan" class="form-label">Uraian Keluhan</label>
-                                    <textarea class="form-control" name="uraian_keluhan" id="uraian_keluhan"></textarea>
+                                    <textarea class="form-control" name="uraian_keluhan" id="uraian_keluhan" rows="5"></textarea>
                                 </div>
                             </div>
                             <div class="col-12">
