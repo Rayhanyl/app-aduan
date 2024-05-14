@@ -82,6 +82,16 @@
             $(document).ready(function() {
                 $("#validasi-nik").click(function() {
                     var idPenduduk = $('#nik').val();
+
+                    if (idPenduduk.trim() === '') {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: 'Warning',
+                            text: 'Isi NIK tidak boleh kosong!',
+                        });
+                        return; // Stop further execution
+                    }
+
                     $.ajax({
                         type: "GET",
                         url: "{{ route('ajax.get.data.penduduk') }}",
@@ -91,19 +101,27 @@
                             id_penduduk: idPenduduk,
                         },
                         beforeSend: function() {
-                            // 
+                            // Optional: Add logic to be executed before sending the request
                         },
                         success: function(data) {
-                            var penduduk = JSON.parse(data)
+                            var penduduk = JSON.parse(data);
+                            if (penduduk == 404) {
+                                Swal.fire({
+                                    icon: 'warning',
+                                    title: 'Warning',
+                                    text: 'Data NIK Tidak ada',
+                                });
+                                return;
+                            }
                             $("#nama_lengkap").val(penduduk.data.nama);
                             $("#email").val(penduduk.data.email);
                             $("#no_wa").val(penduduk.data.noWa);
                         },
                         complete: function() {
-                            // 
+                            // Optional: Add logic to be executed after the request is complete
                         },
                         error: function(xhr, ajaxOptions, thrownError) {
-                            // 
+                            // Optional: Handle errors here
                         },
                     });
                 });
