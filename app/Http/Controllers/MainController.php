@@ -48,8 +48,8 @@ class MainController extends Controller
 
     public function createView()
     {
-        // $kecamatan = fetchApi($this->wilayahUrl);
-        $kecamatan = fetchApiBearer($this->publisherWilayah);
+        $kecamatan = fetchApi($this->wilayahUrl);
+        // $kecamatan = fetchApiBearer($this->publisherWilayah);
         return view('keluhan.create', compact('kecamatan'));
     }
 
@@ -57,8 +57,8 @@ class MainController extends Controller
     {
         try {
             if ($request->ajax()) {
-                // $data_penduduk = fetchApi($this->wargaUrl . '/' . $request->id_penduduk);
-                $data_penduduk = fetchApiBearer($this->publisherKependudukan . '/' . $request->id_penduduk);
+                $data_penduduk = fetchApi($this->wargaUrl . '/' . $request->id_penduduk);
+                // $data_penduduk = fetchApiBearer($this->publisherKependudukan . '/' . $request->id_penduduk);
                 return response()->json($data_penduduk);
             }
             return abort(404);
