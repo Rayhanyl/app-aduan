@@ -14,7 +14,7 @@
                                     @csrf
                                     <div class="col-12 col-lg-8">
                                         <label for="nik" class="form-label">NIK</label>
-                                        <input type="number" class="form-control" name="nik" id="nik" min="16" max="16"
+                                        <input type="number" class="form-control" name="nik" id="nik"
                                             value="">
                                     </div>
                                     <div class="col-12 col-lg-4 p-4">
