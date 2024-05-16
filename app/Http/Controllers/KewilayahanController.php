@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Redis;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class WilayahController extends Controller
+class KewilayahanController extends Controller
 {
 
     private $wilayahUrl;
@@ -17,15 +17,20 @@ class WilayahController extends Controller
         $this->wilayahUrl = getWilayahUrl();
     }
 
+    public function loginView()
+    {
+        return view('kewilayahan.login');
+    }
+
     public function listWilayahView()
     {
         $data_kecamatan = fetchApi($this->wilayahUrl);
-        return view('wilayah.index', compact('data_kecamatan'));
+        return view('kewilayahan.index', compact('data_kecamatan'));
     }
 
     public function createWilayahView()
     {
-        return view('wilayah.create');
+        return view('kewilayahan.create');
     }
 
     public function editWilayahAjax(Request $request)
@@ -33,7 +38,7 @@ class WilayahController extends Controller
         try {
             if ($request->ajax()) {
                 $data_kecamatan = fetchApi($this->wilayahUrl . '/' . $request->id_kecamatan);
-                return view('wilayah.ajax._edit', compact('data_kecamatan'));
+                return view('kewilayahan.ajax._edit', compact('data_kecamatan'));
             }
             return abort(404);
         } catch (\Exception $e) {

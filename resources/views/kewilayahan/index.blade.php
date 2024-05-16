@@ -55,7 +55,7 @@
     </div>
 
     {{-- Modal --}}
-    @include('wilayah.modal.modal')
+    @include('kewilayahan.modal.modal')
     {{-- Modal --}}
 
     @push('scripts')

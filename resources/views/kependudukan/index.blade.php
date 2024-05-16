@@ -78,8 +78,8 @@
         </div>
     </div>
     {{-- Modal --}}
-    @include('warga.modal.modal_detail')
-    @include('warga.modal.modal_edit')
+    @include('kependudukan.modal.modal_detail')
+    @include('kependudukan.modal.modal_edit')
     {{-- Modal --}}
     @push('scripts')
         <script>

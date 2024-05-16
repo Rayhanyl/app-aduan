@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Redis;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class WargaController extends Controller
+class KependudukanController extends Controller
 {
     private $wargaUrl;
 
@@ -16,15 +16,20 @@ class WargaController extends Controller
         $this->wargaUrl = getWargaUrl();
     }
 
+    public function loginView()
+    {
+        return view('kependudukan.login');
+    }
+
     public function listWargaView()
     {
         $data_warga = fetchApi($this->wargaUrl);
-        return view('warga.index', compact('data_warga'));
+        return view('kependudukan.index', compact('data_warga'));
     }
 
     public function createWargaView()
     {
-        return view('warga.create');
+        return view('kependudukan.create');
     }
 
     public function detailAjax(Request $request)
@@ -32,7 +37,7 @@ class WargaController extends Controller
         try {
             if ($request->ajax()) {
                 $data_penduduk = fetchApi($this->wargaUrl . '/' . $request->id_penduduk);
-                return view('warga.ajax._detail', compact('data_penduduk'));
+                return view('kependudukan.ajax._detail', compact('data_penduduk'));
             }
             return abort(404);
         } catch (\Exception $e) {
@@ -45,7 +50,7 @@ class WargaController extends Controller
         try {
             if ($request->ajax()) {
                 $data_penduduk = fetchApi($this->wargaUrl . '/' . $request->id_penduduk);
-                return view('warga.ajax._edit', compact('data_penduduk'));
+                return view('kependudukan.ajax._edit', compact('data_penduduk'));
             }
             return abort(404);
         } catch (\Exception $e) {

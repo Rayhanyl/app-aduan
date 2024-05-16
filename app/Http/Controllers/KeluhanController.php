@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class MainController extends Controller
+class KeluhanController extends Controller
 {
 
     private $baseUrl;
@@ -29,6 +29,11 @@ class MainController extends Controller
         $this->complaintNumber = getBaseUrlComplaintNumber();
         $this->publisherComplaintNumber = getPublisherComplaintNumber();
         $this->publisherKependudukan = getPublisherKependudukan();
+    }
+
+    public function loginView()
+    {
+        return view('keluhan.login');
     }
 
     public function mainView()
