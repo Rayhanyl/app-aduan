@@ -21,7 +21,8 @@
         <div>
             <div class="brand-logo d-flex align-items-center justify-content-between">
                 <a href="{{ route('view.main.page') }}" class="text-nowrap logo-img">
-                    <img style="width:75%;" src="{{ asset('assets/images/logos/swamedia.png') }}" alt="" />
+                    <img class="rounded" src="{{ asset('assets/images/products/dash-prd-' . session('img') . '.jpg') }}"
+                        alt="" />
                 </a>
                 <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                     <i class="ti ti-x fs-8"></i>
@@ -30,11 +31,11 @@
             <!-- Sidebar navigation-->
             <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
                 <ul id="sidebarnav">
-                    {{-- <li class="nav-small-cap">
+                    <li class="nav-small-cap">
                         <iconify-icon icon="solar:menu-dots-linear" class="nav-small-cap-icon fs-4"></iconify-icon>
-                        <span class="hide-menu">Home</span>
+                        <span class="hide-menu">{{ session('aplikasi') }}</span>
                     </li>
-                    <li class="sidebar-item">
+                    {{-- <li class="sidebar-item">
                         <a class="sidebar-link" href="./index.html" aria-expanded="false">
                             <iconify-icon icon="solar:widget-add-line-duotone"></iconify-icon>
                             <span class="hide-menu">Home</span>
@@ -46,7 +47,7 @@
                         </li>
                         <li class="nav-small-cap text-primary">
                             <iconify-icon icon="solar:menu-dots-linear" class="nav-small-cap-icon fs-4"></iconify-icon>
-                            <span class="hide-menu">APLIKASI KELUHAN</span>
+                            <span class="hide-menu">List Menu</span>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="{{ route('view.create.page') }}" aria-expanded="false">
@@ -72,7 +73,7 @@
                         </li>
                         <li class="nav-small-cap text-danger">
                             <iconify-icon icon="solar:menu-dots-linear" class="nav-small-cap-icon fs-4"></iconify-icon>
-                            <span class="hide-menu">APLIKASI KEPENDUDUKAN</span>
+                            <span class="hide-menu">List Menu</span>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="{{ route('view.create.warga.page') }}" aria-expanded="false">
@@ -92,7 +93,7 @@
                         </li>
                         <li class="nav-small-cap text-info">
                             <iconify-icon icon="solar:menu-dots-linear" class="nav-small-cap-icon fs-4"></iconify-icon>
-                            <span class="hide-menu">APLIKASI KEWILAYAHAN</span>
+                            <span class="hide-menu">List Menu</span>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="{{ route('view.create.wilayah.page') }}"
@@ -136,9 +137,6 @@
                 <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                     <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
                         <li class="nav-item dropdown">
-                            {{-- <a href="#">
-                                <p class="fw-bold fs-5 my-auto">Sistem Aplikasi Pengaduan Keluhan Warga</p>
-                            </a> --}}
                             <a class="nav-link" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 <img src="{{ asset('assets/images/profile/user-1.jpg') }}" alt=""

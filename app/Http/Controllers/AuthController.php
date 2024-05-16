@@ -19,6 +19,7 @@ class AuthController extends Controller
                     'username' => 'Admin',
                     'role' => 'keluhan',
                     'aplikasi' => 'Sistem Aplikasi Keluhan Warga',
+                    'img' => '1',
                 ],
             ],
             'kependudukan' => [
@@ -28,6 +29,7 @@ class AuthController extends Controller
                     'username' => 'Admin',
                     'role' => 'kependudukan',
                     'aplikasi' => 'Sistem Aplikasi Kependudukan',
+                    'img' => '3',
                 ],
             ],
             'kewilayahan' => [
@@ -37,6 +39,7 @@ class AuthController extends Controller
                     'username' => 'Admin',
                     'role' => 'kewilayahan',
                     'aplikasi' => 'Sistem Aplikasi Kewilayahan',
+                    'img' => '4',
                 ],
             ],
         ];
@@ -73,6 +76,7 @@ class AuthController extends Controller
                 'role' => $foundUser->role,
                 'username' => $foundUser->username,
                 'aplikasi' => $foundUser->aplikasi,
+                'img' => $foundUser->img,
             ]);
 
             Alert::toast('Selamat datang', 'success');
