@@ -15,7 +15,7 @@
                                     <div class="col-12 col-lg-8">
                                         <label for="nik" class="form-label">NIK</label>
                                         <input type="number" class="form-control" name="nik" id="nik"
-                                            value="">
+                                            value="" readonly>
                                     </div>
                                     <div class="col-12 col-lg-4 p-4">
                                         <button type="button" class="btn btn-primary" id="generateNumber">Generate
