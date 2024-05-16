@@ -55,7 +55,8 @@
     var loaderInfo = $('#modal-loader-info');
     var contentInfo = $('#modal-content-info');
 
-    $(document).on('click', '#btn-info-selengkapnya', function() {
+    $(document).on('click', '#btn-info-selengkapnya', function(event) {
+        event.stopImmediatePropagation(); // Stops other click event handlers on the same element
         modalInfo.show();
         jqmodalInfo.find('.modal-title').html('Info Selengkapnya');
         var idComplaint = $(this).data('id');
@@ -91,7 +92,9 @@
     var loaderTracking = $('#modal-loader-tracking');
     var contentTracking = $('#modal-content-tracking');
 
-    $(document).on('click', '#btn-tracking', function() {
+    $(document).on('click', '#btn-tracking', function(event) {
+        event.stopImmediatePropagation(); // Stops other click event handlers on the same element
+        console.log('Tracking');
         modal.show();
         jqmodal.find('.modal-title').html('Trace Keluhan');
         var idComplaint = $(this).data('id');
