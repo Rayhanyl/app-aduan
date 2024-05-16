@@ -13,8 +13,8 @@
                     <div class="col-md-8 col-lg-4 col-xxl-4">
                         <div class="card mb-0 bg-primary">
                             <div class="card-body text-center">
-                                <img class="rounded" src="{{ asset('assets/images/products/dash-prd-1.jpg') }}"
-                                    alt="logo">
+                                <img style="width: 28%" class="rounded"
+                                    src="{{ asset('assets/images/logos/dash-prd-1.png') }}" alt="logo">
                                 <h5 class="text-white my-4">Aplikasi Keluhan</h5>
                                 <a href="{{ route('view.keluhan.login.page') }}"
                                     class="btn btn-warning my-2 w-50"><b>Login</b></a>
@@ -25,10 +25,11 @@
                     <div class="col-md-8 col-lg-4 col-xxl-4">
                         <div class="card mb-0 bg-warning">
                             <div class="card-body text-center">
-                                <img class="rounded" src="{{ asset('assets/images/products/dash-prd-3.jpg') }}"
-                                    alt="logo">
+                                <img style="width: 20%" class="rounded"
+                                    src="{{ asset('assets/images/logos/dash-prd-3.png') }}" alt="logo">
                                 <h5 class="text-white my-4">Aplikasi Kependudukan</h5>
-                                <a href="{{ route('view.kependudukan.login.page') }}" class="btn btn-primary my-2 w-50"><b>Login</b></a>
+                                <a href="{{ route('view.kependudukan.login.page') }}"
+                                    class="btn btn-primary my-2 w-50"><b>Login</b></a>
                             </div>
                         </div>
                     </div>
@@ -36,10 +37,11 @@
                     <div class="col-md-8 col-lg-4 col-xxl-4">
                         <div class="card mb-0 bg-info">
                             <div class="card-body text-center">
-                                <img class="rounded" src="{{ asset('assets/images/products/dash-prd-4.jpg') }}"
-                                    alt="logo">
+                                <img style="width: 15%" class="rounded"
+                                    src="{{ asset('assets/images/logos/dash-prd-4.png') }}" alt="logo">
                                 <h5 class="text-white my-4">Aplikasi Kewilayahan</h5>
-                                <a href="{{ route('view.kewilayahan.login.page') }}" class="btn btn-light my-2 w-50"><b>Login</b></a>
+                                <a href="{{ route('view.kewilayahan.login.page') }}"
+                                    class="btn btn-light my-2 w-50"><b>Login</b></a>
                             </div>
                         </div>
                     </div>

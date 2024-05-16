@@ -15,8 +15,8 @@
                                         Menu</b></a>
                                 <a href="{{ route('view.main.menu.page') }}"
                                     class="text-nowrap logo-img text-center d-block py-3 w-100">
-                                    <img class="rounded" src="{{ asset('assets/images/products/dash-prd-3.jpg') }}"
-                                        alt="logo" />
+                                    <img style="width:20%;" class="rounded"
+                                        src="{{ asset('assets/images/logos/dash-prd-3.png') }}" alt="logo" />
                                 </a>
                                 <p class="text-center">Aplikasi Kependudukan</p>
                                 <form action="{{ route('login.process') }}" method="POST">

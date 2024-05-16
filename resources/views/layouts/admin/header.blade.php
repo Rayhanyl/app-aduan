@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ session('aplikasi') }}</title>
 
-    <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/favicon2.png') }}" />
+    @if (session('role') == 'keluhan')
+        <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/dash-prd-1.png') }}" />
+    @elseif (session('role') == 'kependudukan')
+        <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/dash-prd-3.png') }}" />
+    @else
+        <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/dash-prd-4.png') }}" />
+    @endif
     <link rel="stylesheet" href="{{ asset('assets/css/styles.min.css') }}" />
     <link
         href="https://cdn.datatables.net/v/bs5/dt-2.0.6/date-1.5.2/fc-5.0.0/fh-4.0.1/r-3.0.2/rg-1.5.0/rr-1.5.0/sc-2.4.2/datatables.min.css"
@@ -21,8 +27,17 @@
         <div>
             <div class="brand-logo d-flex align-items-center justify-content-between">
                 <a href="{{ route('view.main.page') }}" class="text-nowrap logo-img">
-                    <img class="rounded" src="{{ asset('assets/images/products/dash-prd-' . session('img') . '.jpg') }}"
-                        alt="" />
+                    @if (session('role') == 'keluhan')
+                        <img style="width:28%;" class="rounded" src="{{ asset('assets/images/logos/dash-prd-1.png') }}"
+                            alt="" />
+                    @elseif (session('role') == 'kependudukan')
+                        <img style="width:50%;" class="rounded" src="{{ asset('assets/images/logos/dash-prd-3.png') }}"
+                            alt="" />
+                    @else
+                        <img style="width:45%;" class="rounded" src="{{ asset('assets/images/logos/dash-prd-4.png') }}"
+                            alt="" />
+                    @endif
+
                 </a>
                 <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                     <i class="ti ti-x fs-8"></i>
