@@ -11,7 +11,7 @@
                         <h1 class="text-white">MAIN MENU</h1>
                     </div>
                     <div class="col-md-8 col-lg-4 col-xxl-4">
-                        <div class="card mb-0 bg-primary">
+                        <div class="card mb-0 bg-primary shadow-5">
                             <div class="card-body text-center">
                                 <img style="width: 28%" class="rounded"
                                     src="{{ asset('assets/images/logos/dash-prd-1.png') }}" alt="logo">
