@@ -4,11 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Session;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class AuthController extends Controller
 {
+
+    private $consumerKey;
+    private $consumerSecret;
+    private $urlToken;
+
+    public function __construct()
+    {
+        $this->consumerKey = getConsumerKey();
+        $this->consumerSecret = getConsumerSecret();
+        $this->urlToken = getTokenEndpoint();
+    }
+
     private function dataUser()
     {
         return [
@@ -71,12 +84,20 @@ class AuthController extends Controller
         }
 
         if ($foundUser) {
+            $base64 = base64_encode($this->consumerKey . ':' . $this->consumerSecret);
+            $response = Http::withHeaders([
+                'Authorization' => 'Basic ' . $base64,
+            ])->asForm()->post($this->urlToken, [
+                'grant_type' => 'client_credentials'
+            ]);
+            $access_token = json_decode($response->getBody()->getContents());
             Session::put([
                 'email' => $foundUser->email,
                 'role' => $foundUser->role,
                 'username' => $foundUser->username,
                 'aplikasi' => $foundUser->aplikasi,
                 'img' => $foundUser->img,
+                'access_token' => $access_token->access_token,
             ]);
 
             Alert::toast('Selamat datang', 'success');
