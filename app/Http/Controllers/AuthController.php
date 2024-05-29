@@ -14,12 +14,14 @@ class AuthController extends Controller
     private $consumerKey;
     private $consumerSecret;
     private $urlToken;
+    private $host;
 
     public function __construct()
     {
         $this->consumerKey = getConsumerKey();
         $this->consumerSecret = getConsumerSecret();
         $this->urlToken = getTokenEndpoint();
+        $this->host = request()->getHttpHost();
     }
 
     private function dataUser()
@@ -60,7 +62,16 @@ class AuthController extends Controller
 
     public function mainMenuView()
     {
-        return view('auth.main_menu');
+        if ($this->host == 'monitoring.apicentrum.cloud') {
+            return view('keluhan.login');
+        } elseif ($this->host == 'kependudukan.apicentrum.cloud') {
+            return view('kependudukan.login');
+        } elseif ($this->host == 'kewilayahan.apicentrum.cloud') {
+            return view('kewilayahan.login');
+        }else {
+            return view('auth.main_menu');
+        }
+
     }
 
     public function login(Request $request)
@@ -122,6 +133,14 @@ class AuthController extends Controller
     public function logout()
     {
         Session::flush();
-        return redirect()->route('view.main.menu.page');
+        if ($this->host == 'monitoring.apicentrum.cloud') {
+            return redirect()->route('view.keluhan.login.page');
+        } elseif ($this->host == 'kependudukan.apicentrum.cloud') {
+            return redirect()->route('view.kewilayahan.login.page');
+        } elseif ($this->host == 'kewilayahan.apicentrum.cloud') {
+            return redirect()->route('view.kependudukan.login.page');
+        }else{
+            return redirect()->route('view.main.menu.page');
+        }
     }
 }
